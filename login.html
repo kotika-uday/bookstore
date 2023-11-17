@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>21261A1241 Login</title>
+    <style>
+        .b{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        fieldset{
+    border-width: thick;
+    border-color: black;
+    background-color:coral;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            background-image: linear-gradient(rgb(146, 67, 67),lightpink, orange,pink);
+        }
+        .container {
+            width: 330px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(110, 87, 87, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            background-color: #ef0808;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(15, 244, 7) ;
+        }
+        
+    </style>
+</head>
+<body >
+    <div class="cl">
+    <h1 align="center"><span>📚BOOK STORE📚</span></h1>
+    
+    <fieldset>
+    <div class="b" col>
+        <a href="home.html">HOME</a>
+        <a href="login.html">LOGIN</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="catalog.html">CATALOG</a>
+        <a href="cart.html">CART</a>
+        <a href="order conformation.html">ORDER</a>
+        
+        <a href="payment.html">PAYMENT</a>
+        
+       
+</div>
+</fieldset>
+</div>
+<div class="u">
+    <br><br><br>
+    <div class="container">
+        <h2>Login to Book Store</h2>
+        <form action="login_process.php" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="ENTER  YOUR USERNAME" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="ENTER YOUR PASSWORD" required>
+
+            <button type="submit">Login</button>
+        
+            <p>forgot password?</p>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', function (event) {
+                // Prevent the form from submitting by default
+                event.preventDefault();
+
+                // Validate the form fields
+                if (validateForm()) {
+                    // If validation passes, submit the form
+                    alert('login successful')
+                }
+            });
+
+            function validateForm() {
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value.trim();
+
+                // Basic validation example
+                if (username === '') {
+                    alert('Please enter a username.');
+                    return false;
+                }
+
+                if (password === '') {
+                    alert('Please enter a password.');
+                    return false;
+                }
+
+                // You can add more complex validation rules here
+              
+                // If all validation passes
+                return true;
+            }
+        });
+    </script>
+
+</body>
+</div>
+</html>

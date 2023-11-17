@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Clicks</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .b{
+        display: inline-block;
+    border-radius: 25px;
+    height: 250px;
+    width: 400px;
+    border: dashed;
+    background-color:darkcyan;
+          }
+            body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color:crimson;
+}
+.input-container {
+    margin: 20px;
+}
+
+input {
+    width: 50px;
+    margin: 5px;
+}
+
+button {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10cap;
+}
+
+button:hover {
+    background-color:green;
+}
+    </style>
+</head>
+<body style="background-color:black">
+    
+    <h1><u>🕸️Web Page Clicks🕸️</u></h1><br><br><br><br><br>
+    <fieldset class="b">
+    <div class="input-container">
+        <label for="start-page">Start Page:</label>
+        <input type="number" id="start-page" placeholder="ENTER1" autofocus width="30"><br>
+        <label for="end-page">End Page:</label>
+        <input type="number" id="end-page" placeholder="ENTER1" autofocus width="50"><br>
+        <button onclick="findMinimumClicks()">Find Clicks</button>
+    </div>
+    <div id="output"></div>
+</fieldset>
+    <script src="./ex.js"></script>
+</body>
+</html>
+
+
+
+
+//////   java script code/////
+console.log('connected')
+function findMinimumClicks() {
+    const startPage = parseInt(document.getElementById('start-page').value);
+    const endPage = parseInt(document.getElementById('end-page').value);
+
+    const N = 5; 
+    const links = [[2, 4], [1], [5], [1, 5], [5]]; 
+
+    const result = minimumClicks(N, links, startPage, endPage);
+    const outputElement = document.getElementById('output');
+
+    if (result === -1) {
+        outputElement.innerHTML = 'Minimum clicks: -1 (Not possible)';
+    } else {
+        outputElement.innerHTML = 'Minimum clicks: ' + result;
+    }
+}
+
+function minimumClicks(N, links, startPage, endPage) {
+        const adjacencyList = [];
+        for (let i = 0; i < N; i++) {
+            adjacencyList.push([]);
+            for (const link of links[i]) {
+                adjacencyList[i].push(link - 1);
+            }
+        }
+    
+        const queue = [];
+        const visited = new Set();
+    
+        queue.push({ page: startPage - 1, clicks: 0 });
+    
+        while (queue.length > 0) {
+            const { page, clicks } = queue.shift();
+    
+            if (page === endPage - 1) {
+                return clicks;
+            }
+    
+            if (!visited.has(page)) {
+                visited.add(page);
+                for (const link of adjacencyList[page]) {
+                    queue.push({ page: link, clicks: clicks + 1 });
+                }
+            }
+        }
+    
+        return -1; 
+    }

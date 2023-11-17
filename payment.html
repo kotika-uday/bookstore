@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>21261A1241 Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(violet ,rgb(0, 140, 255) ,rgb(0, 128, 109));
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: hsl(125, 98%, 49%);
+      padding: 20px;
+      border-radius: 50px;
+      box-shadow: 0px 0px 10px rgba(211, 14, 14, 0.2);
+    }
+
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+button{
+    background-color:red;
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+}
+    
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <br><br><br><br><br>
+  <h1>Payment Information</h1>
+  <form id="payment-form">
+    <label for="card-number">Credit Card Number:</label>
+    <input type="text" id="card-number" placeholder="Enter card number" >
+    <br>
+
+    <label for="card-expiry">Expiration Date (MM/YY):</label>
+    <input type="text" id="card-expiry" placeholder="MM/YY" >
+    <br>
+
+    <label for="card-cvc">CVC:</label>
+    <input type="text" id="card-cvc" placeholder="Enter CVC" >
+    <br>
+
+     </form>
+     <a href="home.html">
+        <button>Pay</button>
+    </a>
+  
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>21261A1241 Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff53cb, #4a90e2); /* Gradient background for body */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            background: linear-gradient(to right, #ffd9f0, #a1c4fd); /* Gradient background for container */
+            border-radius: 25px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
+        }
+
+        .container:hover {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .order-details,
+        .order-summary,
+        .shipping-details,
+        .order-status {
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ffd9f0;
+        }
+
+        button {
+            width: 150px;
+            height: 30px;
+            border-radius: 30px;
+            background: linear-gradient(to right, #7fff00, #5cbf00); /* Gradient background for button */
+            color: #333;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #5cbf00, #4a8c00); /* Darker gradient on hover */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Order Information</h2>
+        <div class="order-details">
+            <h3>Order Details</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Author</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Goods Train Mystery</td>
+                        <td>by Nalini Varanasi | 1 December 2021</td>
+                        <td>2</td>
+                        <td>$12.99</td>
+                        <td id="subtotal-value">$25.98</td>
+                    </tr>
+                    <!-- Add more rows for other books in the order -->
+                </tbody>
+            </table>
+        </div>
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Subtotal:</td>
+                        <td id="subtotal-value">$25.98</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping Fee:</td>
+                        <td id="shipping-fee-value">$X.XX</td>
+                    </tr>
+                    <tr>
+                        <td>Total Amount:</td>
+                        <td id="total-amount-value">$XX.XX</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="shipping-details">
+            <h3>Shipping Information</h3>
+            <p>Shipping Address: Your Shipping Address Here</p>
+            <p>Shipping Method: Standard Shipping</p>
+            <p>Estimated Delivery Date: XX/XX/XXXX</p>
+        </div>
+        <div class="order-status">
+            <h3>Order Status</h3>
+            <p>Status: Shipped</p>
+            <p>Tracking Number: XXXXXXXX</p>
+        </div>
+    </div>
+    <a href="home.html">
+        <center>
+            <button>BACK TO HOME</button>
+        </center>
+    </a>
+</body>
+
+</html>

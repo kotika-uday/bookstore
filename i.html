@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting Message</title>
+</head>
+<body>
+
+  <form id="nameForm">
+    <label for="userName">Enter Your Name:</label>
+    <input type="text" id="userName" name="userName" required>
+    <button type="button" onclick="displayGreeting()">Submit</button>
+  </form>
+
+  <script>
+    function displayGreeting() {
+      // Get the user's name from the form
+      const userName = document.getElementById("userName").value;
+
+      // Display a greeting message
+      alert("Hello, " + userName + "! Welcome to our website!");
+    }
+  </script>
+
+</body>
+</html>
+

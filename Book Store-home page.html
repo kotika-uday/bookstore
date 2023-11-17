@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://127.0.0.1:5500/home.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <style>
+        .b{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+.i{
+    display: flex;
+    justify-content: space-between;
+}
+div.i {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.i img {
+  padding: 10px;
+}
+fieldset{
+    border-width: thick;
+    border-color: black;
+    background-color:coral;
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.ud{
+  border-radius: 5%;
+  border-color:black;
+  border: thick;
+}
+</style>
+<link rel="stylesheet" href="./Book Store-home page_files/font-awesome.min.css">
+
+</head>
+<body style="background-color:bisque">
+    <h1 align="center"><u>📚BOOK STORE📚</u></h1>
+    <fieldset>
+    <div class="b" col="">
+        <a href="http://127.0.0.1:5500/home.html"><b>HOME</b></a>
+        <a href="http://127.0.0.1:5500/login.html"><b>LOGIN</b></a>
+        <a href="http://127.0.0.1:5500/profile.html"><b>PROFILE</b></a>
+        <a href="http://127.0.0.1:5500/catalog.html"><b>CATALOG</b></a>
+        <a href="http://127.0.0.1:5500/cart.html"><b>CART</b></a>
+        <a href="http://127.0.0.1:5500/order%20conformation.html"><b>ORDER</b></a>
+        <input type="text" placeholder="SEARCH THE BOOKS  🔍" required="" autofocus="">
+       
+</div>
+</fieldset>
+<br>
+<div class="i">
+    <img src="./Book Store-home page_files/2bf7a5921f2793fee851eb2efe6b097b--store-fronts-book-shops.jpg" alt="book" id="a1" height="300" width="300">
+    <img src="./Book Store-home page_files/Argosy-Cropped.webp" alt="" id="a2" height="300">
+    <img src="./Book Store-home page_files/OIP.jpg" alt="" id="a3" height="300">
+    <img src="./Book Store-home page_files/bookstore-slide-2MCD-superJumbo.jpg" alt="" id="a4" height="300">
+</div><br>
+<table>
+    <tbody><tr>
+      <td><img src="./Book Store-home page_files/OIP.jpg" alt="" height="200" class="ud">
+      </td>
+      <td>
+        <center>
+        <h1>About us</h1>
+Buy your favorite book from here <br>
+<a href="http://127.0.0.1:5500/home.html#" class="fa fa-facebook"></a>
+<a href="http://127.0.0.1:5500/home.html#" class="fa fa-youtube"></a>
+<a href="http://127.0.0.1:5500/home.html#" class="fa fa-twitter"></a>
+</center>
+</td>
+</tr>
+</tbody></table>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

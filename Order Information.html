@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://127.0.0.1:5500/order%20conformation.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Order Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:grey;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:chocolate;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .order-details {
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Order Information</h2>
+        <div class="order-details">
+            <h3>Order Details</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Author</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Goods Train Mystery</td>
+                        <td>by Nalini Varanasi | 1 December 2021</td>
+                        <td>2</td>
+                        <td>$12.99</td>
+                        <td>$25.98</td>
+                    </tr>
+                    <!-- Add more rows for other books in the order -->
+                </tbody>
+            </table>
+        </div>
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Subtotal:</td>
+                        <td>$XX.XX</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping Fee:</td>
+                        <td>$X.XX</td>
+                    </tr>
+                    <tr>
+                        <td>Total Amount:</td>
+                        <td>$XX.XX</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="shipping-details">
+            <h3>Shipping Information</h3>
+            <p>Shipping Address: Your Shipping Address Here</p>
+            <p>Shipping Method: Standard Shipping</p>
+            <p>Estimated Delivery Date: XX/XX/XXXX</p>
+        </div>
+        <div class="order-status">
+            <h3>Order Status</h3>
+            <p>Status: Shipped</p>
+            <p>Tracking Number: XXXXXXXX</p>
+        </div>
+    </div>
+    <a href="http://127.0.0.1:5500/home.html"><center>
+        <button style="background-color: chartreuse;">BACK TO HOME</button>
+    </center>
+    </a>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

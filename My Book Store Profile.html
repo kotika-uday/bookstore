@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5500/profile.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>My Book Store Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:blueviolet;
+        }
+        .container {
+            width: 50%;
+            height: 40cap;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:aqua;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .profile-info label {
+            font-weight: bold;
+        }
+        .order-history {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">🙍🏿‍♂️</h1>
+        <h2>My Profile</h2>
+        <div class="profile-info">
+            <div>
+                <label>Name:</label>
+                <span>Your Name</span>
+            </div>
+            <div>
+                <label>Email:</label>
+                <span>your.email@example.com</span>
+            </div>
+            <div>
+                <label for="">Phone No:</label>
+                <span>+91 xxxx xxxx xx</span>
+            </div>
+        </div>
+        <div class="order-history">
+            <h3>Order History:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345</td>
+                        <td>2023-11-08</td>
+                        <td>$75.99</td>
+                        <td>Shipped</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> <br>
+     <center><a href="http://127.0.0.1:5500/home.html">
+    <button style="background-color: crimson;">BACK TO HOME</button>
+</a>
+</center>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
